@@ -14,6 +14,8 @@ const router = express.Router();
 // @access  Admin
 router.get("/", auth, async (req, res) => {
   try {
+    const oneWeekAgo = new Date();
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
     // Delete old reservations first
     await Reservation.deleteMany({
       createdAt: { $lt: oneWeekAgo },
