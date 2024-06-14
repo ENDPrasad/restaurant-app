@@ -14,6 +14,11 @@ const router = express.Router();
 // @access  Admin
 router.get("/", auth, async (req, res) => {
   try {
+    // Delete old reservations first
+    await Reservation.deleteMany({
+      createdAt: { $lt: oneWeekAgo },
+    });
+
     const reservations = await Reservation.find();
     res.json(reservations);
   } catch (err) {
