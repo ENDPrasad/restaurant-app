@@ -26,9 +26,9 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "DATABASE_URL": "@database_url",
-    "EMAIL": "@email",
-    "EMAIL_PASSWORD": "@email_password"
+    "DATABASE_URL": "mongodb+srv://endprasad:Prasad421@prasaddb.pqtmubm.mongodb.net/?retryWrites=true&w=majority&appName=prasaddb",
+    "EMAIL": "e.n.d.prasad@gmail.com",
+    "EMAIL_PASSWORD": "lkrwgnskekcdfqrz",
+    "JWT_SECRET": "12345678"
   }
 }
-
